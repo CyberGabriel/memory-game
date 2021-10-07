@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css"></link>
+    <script src="app.js" charset="utf-8"></script>
+</head>
+<body>
+    
+    <nav class='navbar'>
+        <div class="navContainer">
+            <h1 id='gameTitle'>Memory Game</h1>
+            <div class="buttons-container">
+                <button class="buttons" type='button' id='newGame'>New Game</button>
+                <button class="buttons" id='resetScore'>Reset Scoreboard</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class='gameContainer'>
+        <div id='startText' class='overlay-text visible'>Click to Start</div>
+        <div id='gameWonText' class='overlay-text'>You win!</div>
+        <div class='stats'>
+            <h3>Matches found: <span id='result'>0</span></h3>
+            <h3>No. of tries:<span id='tries'>0</span></h3>
+            <h3>Time:<span id='timer'>00:00:00</span></h3>
+        </div>
+        <div class='grid'></div>
+        <div class='scoreboard'>
+            <h2>Highest Score:<span id='highScore'>0</span></h2>
+            <h3>Previous Score:<span id='previousScore'>0</span></h3>
+            <h3>Total Score:<span id='score'>0</span></h3>
+        </div>
+    </main>
+    
+    <footer class='footer'>
+        <button class="buttons" id='dark-theme-btn'>Dark Theme</button>
+        <button class="buttons" id='light-theme-btn'>Light Theme</button>
+    </footer>
+
+</body>
+</html>

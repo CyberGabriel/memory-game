@@ -1,0 +1,116 @@
+html,
+body {
+    height: 100%;
+    background-color: var(--nav-btn-color);
+}
+
+:root {
+    --elem-color: hsl(36, 100%, 89%);
+    --text-color: hsl(209, 92%, 40%);
+    --nav-btn-color: hsl(0, 0%, 100%);
+    --border-radius: 10px;
+}
+
+.overlay-text {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: auto;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.overlay-text.visible {
+    display: flex;
+    animation: overlay-grow 500ms forwards;
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+}
+
+@keyframes overlay-grow {
+    from {
+        background-color: rgba(0,0,0,0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(148, 203, 255, 0.2);
+        font-size: 8vw;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 55px;
+    margin: 50px auto 75px;
+    background-color: var(--elem-color);
+    max-width: 800px;
+    height: 125px;
+    border-radius: var(--border-radius);
+}
+
+#gameTitle {
+    font-size: 2.5em;
+    margin: 10px 25px;
+    color: var(--text-color);
+}
+
+.navBtns {
+    margin: 20px 30px;
+
+}
+
+.buttons {
+    border: none;
+    background-color: var(--nav-btn-color);
+    color: var(--text-color);
+    padding: 10px;
+    font-size: 16px;
+    width: 150px;
+    border-radius: var(--border-radius);
+    transition-duration: 0.4s;
+}
+
+.buttons:hover {
+    background-color: var(--text-color);
+    color: var(--nav-btn-color);
+    cursor: pointer;
+}
+
+.gameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    
+}
+
+.grid {
+    display: flex; 
+    flex-wrap: wrap;
+    height: 400px;
+    width: 400px;
+}
+
+.stats, .scoreboard {
+    background-color: var(--elem-color);
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    padding: 35px;
+    margin: 20px;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 35px;
+    margin: 20px auto 35px;
+    background-color: var(--elem-color);
+    max-width: 800px;
+    height: 40px;
+    border-radius: var(--border-radius);
+}
